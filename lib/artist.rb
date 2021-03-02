@@ -1,12 +1,12 @@
 class Artist
   
-  attr_accessor :name, :songs
+  attr_accessor :name
   
   @@all = []
   
   def initialize(name)
     @name = name
-    @songs = []
+    # @songs = [] This is not required at all
     @@all << self
   end
   
@@ -35,6 +35,9 @@ class Artist
   def print_songs
     # @songs.each {|song| puts Song.artist.name}
     # @@all.each {|song| puts song}
-   self.songs.each {|song| puts song.name}
+     
+  # self.songs.each {|song| puts song.name} The prev test passed with this one but it was not correct
+   
+   songs.each {|song| puts song.name}
   end
 end
